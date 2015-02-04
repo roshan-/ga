@@ -30,12 +30,20 @@ public class AnalyticsController {
 	
 	public void exportProcess() {
 		try {
-			ExportTask task= new ExportTask("96667371", "2015-01-01", Arrays.asList(GaMetrics.totalEvents), 
+			ExportTask task= new ExportTask("96667371", "2015-01-25", Arrays.asList(GaMetrics.totalEvents), 
 					Arrays.asList( 	GaDimensions.hour, GaDimensions.minute, GaDimensions.citiRequestId, 
 									GaDimensions.eventCategory, GaDimensions.eventAction, GaDimensions.eventLabel), 
 					Arrays.asList(GaDimensions.hour, GaDimensions.minute), 
 					"eventSet", SinkType.FileSystemType, (long)60*60*1000);
 			task.run();
+
+			task= new ExportTask("96667371", "2015-01-26", Arrays.asList(GaMetrics.totalEvents), 
+					Arrays.asList( 	GaDimensions.hour, GaDimensions.minute, 
+									GaDimensions.eventCategory, GaDimensions.eventAction, GaDimensions.eventLabel), 
+					Arrays.asList(GaDimensions.hour, GaDimensions.minute), 
+					"eventSet", SinkType.FileSystemType, (long)60*60*1000);
+			task.run();
+		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

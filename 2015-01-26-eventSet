@@ -1,0 +1,4 @@
+                       ga:hour                     ga:minute              ga:eventCategory                ga:eventAction                 ga:eventLabel                ga:totalEvents
+                            14                            23                           log                        timing          begin calculate time                             2
+                            14                            23                           log                        timingcalculated standardLoadTime:1873                             1
+                            14                            23                           log                        timingcalculated standardLoadTime:553                             1
