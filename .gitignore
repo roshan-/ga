@@ -2,4 +2,6 @@
 *.7z
 *.svg
 bin
+*.tmp
+.settings/
 
