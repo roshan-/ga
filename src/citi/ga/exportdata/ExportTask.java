@@ -35,7 +35,6 @@ public class ExportTask implements Runnable{
 	@Override
 	public void run() {
 		try {
-			while (true) {
 			GaData data= AnalyticsService.getAnalytics().data().ga().get("ga:"+ profileId,
 			        date, // Start date.
 			        date, // End date.
@@ -64,8 +63,6 @@ public class ExportTask implements Runnable{
 		        }
 		      }
 		    sink.close();
-			Thread.sleep(interval);
-			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
