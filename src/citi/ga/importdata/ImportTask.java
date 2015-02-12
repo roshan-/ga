@@ -20,9 +20,9 @@ public class ImportTask implements Runnable{
 	@Override
 	public void run() {
 	    try {
-//	      Upload uQA= analytics.management().uploads().uploadData("96667371", "UA-53906132-4", "GkcrBboGSEas_qNZvBt58w", data).execute();
-	      Upload u3936= AnalyticsService.getAnalytics().management().uploads().uploadData("96667371", "UA-53906132-5", "H2OefjqiRIavtH5mOl5XYQ", source.getInputStreamContent()).execute();
-	      System.out.println(u3936.getErrors().toString());
+//	      Upload u= AnalyticsService.getAnalytics().management().uploads().uploadData("96667371", "UA-53906132-4", "kBHCpZSTTuC9cLsRsyiryw", source.getInputStreamContent()).execute();
+	      Upload u= AnalyticsService.getAnalytics().management().uploads().uploadData("96667371", "UA-53906132-5", "aMl4xcLFQfOYi83VmBjOzw", source.getInputStreamContent()).execute();
+	      System.out.println(u.getStatus());
 	    } catch (IOException e) {
 	      System.out.println(e.getMessage());
 	    }
